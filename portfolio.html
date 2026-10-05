@@ -1,0 +1,1430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Garvit Jain | Software Developer</title>
+
+  <meta
+    name="description"
+    content="Garvit Jain — Computer Science Engineering student, Software Developer, Full Stack Developer and AI enthusiast."
+  />
+
+  <meta name="author" content="Garvit Jain" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+    :root {
+      --bg: #070b14;
+      --bg-secondary: #0c1220;
+      --card: rgba(17, 25, 40, 0.72);
+      --card-hover: rgba(23, 34, 54, 0.9);
+      --text: #f5f7fb;
+      --muted: #9aa6b8;
+      --border: rgba(255, 255, 255, 0.09);
+      --primary: #7c5cff;
+      --secondary: #00d4ff;
+      --gradient: linear-gradient(135deg, #7c5cff, #00d4ff);
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(124, 92, 255, 0.13), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(0, 212, 255, 0.09), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 11, 20, 0.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--secondary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-btn {
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: var(--gradient);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 13px;
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      border-radius: 100px;
+      background: rgba(0, 212, 255, 0.06);
+      color: #a9efff;
+      font-size: 0.8rem;
+      margin-bottom: 25px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #39e58c;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #39e58c;
+    }
+
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3.3rem, 7vw, 6.5rem);
+      line-height: 0.98;
+      letter-spacing: -5px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: var(--muted);
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 21px;
+      border-radius: 9px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(124, 92, 255, 0.25);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: white;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.25);
+      transform: translateY(-3px);
+    }
+
+    /* CODE CARD */
+
+    .code-card {
+      border: 1px solid var(--border);
+      background: rgba(12, 18, 32, 0.82);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+      transform: rotate(2deg);
+      transition: 0.4s;
+    }
+
+    .code-card:hover {
+      transform: rotate(0deg) translateY(-5px);
+    }
+
+    .window-top {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 20px;
+    }
+
+    .window-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #3b4352;
+    }
+
+    .code {
+      font-family: monospace;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 2;
+    }
+
+    .purple { color: #c084fc; }
+    .blue { color: #67e8f9; }
+    .green { color: #86efac; }
+    .orange { color: #fdba74; }
+
+    /* ================= GENERAL ================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-label {
+      color: var(--secondary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      max-width: 700px;
+      color: var(--muted);
+      margin-bottom: 45px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .glass-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+      transition: 0.3s;
+    }
+
+    .glass-card:hover {
+      background: var(--card-hover);
+      transform: translateY(-5px);
+    }
+
+    .glass-card p {
+      color: var(--muted);
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .info-item {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .info-item small {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .info-item strong {
+      font-size: 0.92rem;
+    }
+
+    /* ================= SKILLS ================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 14px;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(124,92,255,0.4);
+    }
+
+    .skill-card i {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+      color: var(--secondary);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      transition: 0.35s;
+    }
+
+    .project:hover {
+      transform: translateY(-7px);
+      border-color: rgba(0,212,255,0.3);
+    }
+
+    .project-number {
+      font-family: monospace;
+      color: var(--secondary);
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+
+    .project h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: rgba(124,92,255,0.1);
+      color: #c8bcff;
+      font-size: 0.72rem;
+      border: 1px solid rgba(124,92,255,0.15);
+    }
+
+    .project-link {
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      color: var(--secondary);
+    }
+
+    /* ================= EXPERIENCE / JOURNEY ================= */
+
+    .timeline {
+      border-left: 1px solid rgba(255,255,255,0.12);
+      margin-left: 10px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 40px 35px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      background: var(--secondary);
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,212,255,0.6);
+    }
+
+    .timeline-date {
+      color: var(--secondary);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .timeline h3 {
+      margin: 6px 0;
+    }
+
+    .timeline p {
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 0.9rem;
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 30px 15px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+      text-align: center;
+      padding-bottom: 130px;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 30px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at center, rgba(124,92,255,0.12), transparent 65%),
+        var(--card);
+    }
+    .contact-email {
+      color: var(--muted);
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-email i {
+      color: var(--secondary);
+      margin-right: 8px;
+    }
+
+    .contact-box h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 30px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .social {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      transition: 0.3s;
+      color: var(--muted);
+    }
+
+    .social:hover {
+      color: white;
+      background: var(--card-hover);
+      transform: translateY(-4px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .code-card {
+        max-width: 600px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-info {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        G<span>.</span>Jain
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-btn">
+        Let's Talk
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="availability">
+            <span class="status-dot"></span>
+            Open to opportunities
+          </div>
+
+          <h1>
+            Garvit<br>
+            <span class="gradient-text">Jain.</span>
+          </h1>
+
+          <h2>
+            Software Developer · Full Stack · AI Enthusiast
+          </h2>
+
+          <p>
+            Computer Science Engineering student passionate about building
+            scalable applications, solving challenging problems and exploring
+            the intersection of software engineering and artificial intelligence.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="https://github.com/MASTERGARVIT"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/garvit-jain-aa81b128a"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
+            </a>
+
+            <a href="#projects" class="btn btn-outline">
+              <i class="fa-solid fa-code"></i>
+              View Projects
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- CODE WINDOW -->
+
+        <div class="code-card">
+
+          <div class="window-top">
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+          </div>
+
+          <div class="code">
+
+            <div>
+              <span class="purple">const</span>
+              developer =
+              <span class="blue">{"{"}</span>
+            </div>
+
+            <div>
+              &nbsp;&nbsp;name:
+              <span class="green">"Garvit Jain"</span>,
+            </div>
+
+            <div>
+              &nbsp;&nbsp;role:
+              <span class="green">"Software Developer"</span>,
+            </div>
+
+            <div>
+              &nbsp;&nbsp;language:
+              <span class="green">"Java"</span>,
+            </div>
+
+            <div>
+              &nbsp;&nbsp;focus:
+              <span class="green">"DSA + Full Stack"</span>,
+            </div>
+
+            <div>
+              &nbsp;&nbsp;interests:
+              <span class="green">["AI", "Cloud", "DevOps"]</span>
+            </div>
+
+            <div>
+              <span class="blue">{"}"}</span>;
+            </div>
+
+            <br>
+
+            <div>
+              <span class="purple">while</span>
+              (learning) {"{"}
+            </div>
+
+            <div>
+              &nbsp;&nbsp;build();
+            </div>
+
+            <div>
+              &nbsp;&nbsp;solve();
+            </div>
+
+            <div>
+              &nbsp;&nbsp;improve();
+            </div>
+
+            <div>
+              {"}"}
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-label">01 — About</div>
+
+        <h2 class="section-title">
+          Building. Learning. Solving.
+        </h2>
+
+        <p class="section-description">
+          I'm a Computer Science Engineering student focused on becoming a
+          strong software engineer through consistent problem solving,
+          real-world projects and continuous learning.
+        </p>
+
+
+        <div class="about-grid">
+
+          <div class="glass-card">
+
+            <p>
+              My primary programming language is <strong>Java</strong>, and I
+              actively practice Data Structures and Algorithms to strengthen
+              my problem-solving skills.
+            </p>
+
+            <br>
+
+            <p>
+              Alongside DSA, I build full-stack applications using technologies
+              such as React, Node.js, Next.js, Spring Boot and databases such
+              as MongoDB and PostgreSQL.
+            </p>
+
+            <br>
+
+            <p>
+              I'm also exploring Artificial Intelligence, LLM applications,
+              LangChain, LLMOps, cloud computing and DevOps.
+            </p>
+
+          </div>
+
+
+          <div class="glass-card">
+
+            <div class="quick-info">
+
+              <div class="info-item">
+                <small>Education</small>
+                <strong>B.Tech CSE</strong>
+              </div>
+
+              <div class="info-item">
+                <small>Primary Language</small>
+                <strong>Java</strong>
+              </div>
+
+              <div class="info-item">
+                <small>Development</small>
+                <strong>Full Stack</strong>
+              </div>
+
+              <div class="info-item">
+                <small>Interests</small>
+                <strong>AI & Cloud</strong>
+              </div>
+
+              <div class="info-item">
+                <small>Problem Solving</small>
+                <strong>DSA</strong>
+              </div>
+
+              <div class="info-item">
+                <small>Looking For</small>
+                <strong>Software Roles</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-label">02 — Skills</div>
+
+        <h2 class="section-title">
+          My Technical Toolkit
+        </h2>
+
+        <p class="section-description">
+          Technologies I use to build, deploy and experiment with software.
+        </p>
+
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <i class="fa-brands fa-java"></i>
+            <h3>Java & DSA</h3>
+            <p>
+              Java, OOP, Data Structures, Algorithms, Recursion,
+              Backtracking and problem solving.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-brands fa-react"></i>
+            <h3>Frontend</h3>
+            <p>
+              React, Next.js, JavaScript, TypeScript, HTML, CSS and
+              responsive UI development.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-server"></i>
+            <h3>Backend</h3>
+            <p>
+              Node.js, Express, Spring Boot, FastAPI and REST API
+              development.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-database"></i>
+            <h3>Databases</h3>
+            <p>
+              MongoDB, PostgreSQL, MySQL, Firebase, Firestore and
+              database management.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-brands fa-python"></i>
+            <h3>Python & AI</h3>
+            <p>
+              Python, AI applications, LLMs, LangChain, LLM evaluation
+              and AI agents.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-brands fa-docker"></i>
+            <h3>DevOps</h3>
+            <p>
+              Docker, Git, GitHub, deployment workflows and
+              development practices.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-brands fa-aws"></i>
+            <h3>Cloud</h3>
+            <p>
+              AWS fundamentals, cloud deployment, S3 and cloud-based
+              application concepts.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-code-branch"></i>
+            <h3>Development</h3>
+            <p>
+              REST APIs, Git, GitHub, API integration and modern
+              software development workflows.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-label">03 — Projects</div>
+
+        <h2 class="section-title">
+          Things I've Built
+        </h2>
+
+        <p class="section-description">
+          A selection of projects I've worked on while learning and
+          experimenting with different technologies.
+        </p>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 1 -->
+          <div class="project">
+
+            <div class="project-number">
+              01 / FULL STACK
+            </div>
+
+            <h3>E-Commerce Platform</h3>
+
+            <p>
+              A modern full-stack e-commerce platform designed for an
+              online business, featuring product management,
+              authentication, database integration and online payments.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">React</span>
+              <span class="tag">Prisma</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Tailwind</span>
+            </div>
+
+            <!-- Replace link -->
+            <a
+              href="https://my-ecommerce-k4da.vercel.app/"
+              target="_blank"
+              class="project-link"
+            >
+              View Project →
+            </a>
+          </div>
+          <!-- PROJECT 2 -->
+
+          <div class="project">
+
+            <div class="project-number">
+              02 / AI
+            </div>
+
+            <h3>TruthLens</h3>
+
+            <p>
+              An AI-focused project exploring misinformation analysis
+              and intelligent content processing using modern AI
+              techniques.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">AI</span>
+              <span class="tag">TF-IDF</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+
+            <a
+              href="https://truthlens-snowy.vercel.app/"
+              target="_blank"
+              class="project-link"
+            >
+              View Project →
+            </a>
+
+          </div>
+
+          <!-- PROJECT 3  -->
+
+          <div class="project">
+
+            <div class="project-number">
+              03 / WEB DEVELOPMENT
+            </div>
+
+            <h3>Master Blog</h3>
+
+            <p>
+              A blogging platform built with Firebase and Firestore,
+              featuring blog publishing, authentication and an
+              administration workflow.
+            </p>
+
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Firestore</span>
+            </div>
+
+            <a
+              href="https://mastergarvit.github.io/my-blog/index.html"
+              target="_blank"
+              class="project-link"
+            >
+              View Project →
+            </a>
+
+          </div>
+
+
+          <!-- PROJECT 4 -->
+
+          <div class="project">
+
+            <div class="project-number">
+              04 / AI + SECURITY
+            </div>
+
+            <h3>Agentic Honeypot</h3>
+
+            <p>
+              An AI-powered cybersecurity project designed around
+              intelligent interaction with suspicious activity using
+              an agentic architecture.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">AI</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Docker</span>
+            </div>
+
+            <a
+              href="https://agentic-honeypot-x7sb.onrender.com/docs"
+              target="_blank"
+              class="project-link"
+            >
+              View Project →
+            </a>
+<!-- PROJECT 5 -->
+          </div>
+          <div class="project">
+
+            <div class="project-number">
+              05 / FULL STACK
+            </div>
+
+            <h3>Jewellery E-Commerce Platform</h3>
+
+            <p>
+              A modern full-stack e-commerce platform designed for an
+              artificial jewellery business, featuring product management,
+              authentication, database integration and online payments.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">React</span>
+              <span class="tag">Prisma</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Tailwind</span>
+            </div>
+
+            <!-- Replace link -->
+            <a
+              href="https://mastergarvit.github.io/jewellery-ecommerce/"
+              target="_blank"
+              class="project-link"
+            >
+              View Project →
+            </a>
+
+
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= JOURNEY ================= -->
+
+    <section id="journey">
+
+      <div class="container">
+
+        <div class="section-label">04 — Journey</div>
+
+        <h2 class="section-title">
+          Learning & Building
+        </h2>
+
+        <p class="section-description">
+          My journey is centered around consistent learning, practical
+          development and challenging myself through projects and competitions.
+        </p>
+
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+
+            <div class="timeline-date">
+              CURRENT
+            </div>
+
+            <h3>Software Engineering Preparation</h3>
+
+            <p>
+              Strengthening Java, DSA, OOP, DBMS, computer science
+              fundamentals and interview problem solving.
+            </p>
+
+          </div>
+
+
+          <div class="timeline-item">
+
+            <div class="timeline-date">
+              FULL STACK
+            </div>
+
+            <h3>Building Real-World Applications</h3>
+
+            <p>
+              Developing full-stack applications using React, Next.js,
+              Node.js, Spring Boot, databases and modern deployment tools.
+            </p>
+
+          </div>
+
+
+          <div class="timeline-item">
+
+            <div class="timeline-date">
+              AI
+            </div>
+
+            <h3>Exploring AI & LLM Engineering</h3>
+
+            <p>
+              Exploring LLM applications, LangChain, AI agents,
+              LLM evaluation and LLMOps.
+            </p>
+
+          </div>
+
+
+          <div class="timeline-item">
+
+            <div class="timeline-date">
+              HACKATHONS
+            </div>
+
+            <h3>Building Under Pressure</h3>
+
+            <p>
+              Participating in hackathons and technical challenges to
+              transform ideas into working products within limited time.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="stats">
+
+          <div class="stat">
+            <h3>DSA</h3>
+            <p>Regular Practice</p>
+          </div>
+
+          <div class="stat">
+            <h3>Java</h3>
+            <p>Primary Language</p>
+          </div>
+
+          <div class="stat">
+            <h3>Full Stack</h3>
+            <p>Development Focus</p>
+          </div>
+
+          <div class="stat">
+            <h3>AI</h3>
+            <p>Growing Expertise</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="section-label">
+            05 — Contact
+          </div>
+
+          <h2>
+            Let's build something
+            <span class="gradient-text">great.</span>
+          </h2>
+
+          <p>
+            I'm interested in software engineering opportunities,
+            internships, collaborations, hackathons and interesting
+            technical projects.
+          </p>
+
+
+          <div class="hero-buttons"
+               style="justify-content:center; margin-bottom:25px;">
+
+            <!-- Replace email -->
+            <a
+              href="mailto:garvitjain118@gmail.com"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              Get In Touch
+            </a>
+            <p class="contact-email">
+              <i class="fa-solid fa-envelope"></i>
+              garvitjain118@gmail.com
+            </p>
+            <p class="contact-email">
+              <i class="fa-solid fa-envelope"></i>
+              +91-7451047544
+            </p>
+
+          </div>
+
+
+          <div class="socials">
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/MASTERGRAVIT"
+              target="_blank"
+              class="social"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://linkedin.com/in/garvit-jain-0118"
+              target="_blank"
+              class="social"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <!-- LeetCode -->
+            <a
+              href="https://leetcode.com/u/Garvit_Jain110/"
+              target="_blank"
+              class="social"
+              title="LeetCode"
+            >
+              <i class="fa-solid fa-code"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 Garvit Jain · Built with HTML, CSS & JavaScript
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
